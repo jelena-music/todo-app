@@ -65,7 +65,11 @@ class TodoList extends Component {
                     <ListGroup >
                     { 
                     this.state.listOfTodos.map((element,idx)=>{
-                        return <ListGroup.Item variant={element.status=='pending'?'warning':'info'} style={{ fontSize:15, color: 'black' }}  key={idx}>   
+                        return <ListGroup.Item 
+                        variant={element.status=='pending'?'warning':'info'} 
+                        style={element.status=='Done'? { fontSize:15, color: 'black' , textDecorationLine:  'line-through' }:
+                        { fontSize:15, color: 'black'}
+                    }  key={idx}>   
                                     {element.value} 
 
                                     <Button onClick = {(e)=>this.MoveToDone(e,idx)}  style={{float: 'left' }} > Finish </Button>
