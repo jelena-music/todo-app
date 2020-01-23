@@ -72,7 +72,7 @@ class TodoList extends Component {
                     }  key={idx}>   
                                     {element.value} 
 
-                                    <Button onClick = {(e)=>this.MoveToDone(e,idx)}  style={{float: 'left' }} > Finish </Button>
+                                    <Button className={element.status=='Done'? 'hidden' : ''}  onClick = {(e)=>this.MoveToDone(e,idx)}  style={{float: 'left' }} > Finish </Button>
 
                                     <Button onClick = {(e)=>this.DeleteFromList(e,idx)}  style={{float: 'right' }} > X </Button>
                                 </ListGroup.Item>
