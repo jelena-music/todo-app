@@ -50,7 +50,7 @@ class TodoList extends Component {
     render(){
         return (
             <div className="">
-                <p style={{ fontSize:17, color: 'white' }} >Todo list to keep me bussy </p>
+                <p style={{ fontSize:17, color: 'white' }} >Todo list to keep me busy </p>
               
                 <Form inline onSubmit={this.AddToList}   style={{margin: '20px'}}  >
                     <Form.Control size="lg" value={ this.state.newTask } 
@@ -67,7 +67,7 @@ class TodoList extends Component {
                     this.state.listOfTodos.map((element,idx)=>{
                         return <ListGroup.Item 
                         variant={element.status=='pending'?'warning':'info'} 
-                        style={element.status=='Done'? { fontSize:15, color: 'black' , textDecorationLine:  'line-through' }:
+                        style={element.status=='Done'? { fontSize:13, color: 'black' , textDecorationLine:  'line-through' }:
                         { fontSize:15, color: 'black'}
                     }  key={idx}>   
                                     {element.value} 
